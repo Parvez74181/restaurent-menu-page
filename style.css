@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,600;0,500;1,100&display=swap');
+
+* {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     font-family: 'Poppins', sans-serif;
+}
+
+
+.flex {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+}
+
+nav {
+     width: 100vw;
+     height: 30vh;
+}
+
+nav ul {
+     position: relative;
+     width: 100vw;
+     justify-content: space-evenly !important;
+     flex-wrap: wrap;
+     gap: 20px;
+}
+
+nav ul li {
+     list-style: none;
+}
+
+nav ul li a {
+     position: relative;
+     text-decoration: none;
+     color: #2374AB;
+     font-weight: 600;
+     font-size: 1.55rem;
+}
+
+nav ul li a::after {
+     content: '';
+     position: absolute;
+     width: 100%;
+     height: 2px;
+     top: 100%;
+     left: 0;
+     scale: 0;
+     transition: 0.3s;
+     transform-origin: center center;
+     background: #2374AB;
+}
+
+nav ul li a:hover::after {
+     scale: 1;
+}
+
+nav ul li a.active::after {
+     scale: 1;
+}
+
+main {
+     position: relative;
+     left: 50%;
+     transform: translateX(-50%);
+     padding: 2rem;
+     flex-wrap: wrap;
+     gap: 100px;
+     width: 85vw;
+}
+
+main .box {
+
+     border-radius: 5px;
+     width: 18rem;
+     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+main .box .img-box,
+main .box .img-box img {
+     position: relative;
+     border-radius: 5px;
+     top: 3%;
+     left: 50%;
+     transform: translateX(-50%);
+     width: 97%;
+     height: 15rem;
+     object-fit: cover;
+}
+
+main .box .content {
+     padding: 1rem;
+}
+
+main .box .content .title {
+     margin-bottom: 1rem;
+     text-transform: capitalize;
+     font-size: 1.2rem;
+
+}
+
+main .box .content .desc {
+     height: 4.5rem;
+     overflow: hidden;
+     display: -webkit-box;
+     -webkit-line-clamp: 4;
+     -webkit-box-orient: vertical;
+     text-align: justify;
+}
+
+main .box button {
+     outline: none;
+     border: none;
+     background: none;
+     margin: 1rem;
+     padding-bottom: 1rem;
+     font-size: 1rem;
+     color: #275DAD;
+     cursor: pointer;
+}
